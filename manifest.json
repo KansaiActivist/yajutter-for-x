@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "ヤジュッター for X",
+  "version": "1.0.2",
+  "description": "ヤジュッター(yajutter.yajuvideo.st)の見た目・挙動をXライクなタイムラインUIに変更します。ダークテーマ、カラム幅の調整、無限スクロール、トップへ戻るボタンなどを追加します。",
+  "author": "Custom Extension",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://yajutter.yajuvideo.st/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://yajutter.yajuvideo.st/*"],
+      "css": ["content.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_title": "ヤジュッター for X",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  }
+}
